@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeDetails"
+    android:background="@color/black_1"
+    android:orientation="vertical">
+    
+    <androidx.appcompat.widget.Toolbar
+        app:title=" Recipe Details"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_recipe_name"
+                android:text="Recipe Name"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_source_name"
+                android:gravity="center"
+                android:text="Source"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:padding="8dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/iv_recipe"
+                android:scaleType="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_summary"
+                android:text="Summary"
+                android:maxLines="2"
+
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:layout_margin="8dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_instruction"
+                android:layout_margin="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_ingredients"
+                android:layout_margin="8dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rv_similar"
+                android:layout_margin="8dp"
+                android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
