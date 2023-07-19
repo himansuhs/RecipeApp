@@ -54,14 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-//        ArrayAdapter arrayAdapter=ArrayAdapter.createFromResource(
-//                this,
-//                R.array.tags,
-//                R.layout.spinner_text
-//        );
-//        arrayAdapter.setDropDownViewResource(R.layout.spinner);
-//        spinner_text.setAdapter(arrayAdapter);
-//        spinner_text.setOnItemSelectedListener(spinnerSelected);
+//
 
         manager=new RequestManager(this);
         manager.getRandomRecipes(randomRecipeResponseListener);
@@ -84,21 +77,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-//    private final AdapterView.OnItemSelectedListener spinnerSelected=new AdapterView.OnItemSelectedListener() {
-//        @Override
-//        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//            tags.clear();
-//            tags.add(parent.getSelectedItem().toString());
-//            manager.getRandomRecipes(randomRecipeResponseListener,tags);
-//            dialog.show();
 //
-//        }
-//
-//        @Override
-//        public void onNothingSelected(AdapterView<?> parent) {
-//
-//        }
-//    };
     private final RecipeClickListener recipeClickListener=new RecipeClickListener() {
         @Override
         public void onRecipeClicked(String id) {
